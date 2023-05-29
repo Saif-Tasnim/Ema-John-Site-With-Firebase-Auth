@@ -1,0 +1,65 @@
+.review-box {
+    width: 571px;
+    height: 120px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-text {
+    display: flex;
+}
+
+.img-text>img {
+    height: 100px;
+    width: 91px;
+    padding: 8px;
+
+}
+
+.text>h3 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 18px;
+    color: #1C2B35;
+}
+
+.text>p {
+    font-size: 15px;
+    line-height: 12px;
+    color: #1C2B35;
+}
+
+.text>p>span {
+    color: #FF9900;
+}
+
+
+
+/* delete button  */
+
+.dlt-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+}
+
+.dlt-btn{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #EB5757;
+    border: #EB5757 ;
+}
+
+.dlt-btn:hover{
+    cursor: pointer;
+}
+
+.icon{
+    background-color: #EB5757;
+    font-size: 18px;
+}
