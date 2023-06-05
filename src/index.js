@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import Home from './Components/Home/Home';
 import Shop from './Components/Shop/Shop';
 import Orders from './Components/Orders/Orders';
@@ -16,6 +16,7 @@ import Inventory from './Components/Inventory/Inventory';
 import LogIn from './Components/LogIn/LogIn';
 import cartProducts from './loaders/cartProductsLoader';
 import CheckOut from './Components/CheckOut/CheckOut';
+import Register from './Components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -29,19 +30,23 @@ const router = createBrowserRouter([
       {
         path: '/order',
         element: <Orders></Orders>,
-        loader: cartProducts 
+        loader: cartProducts
       },
       {
         path: '/management',
         element: <Inventory></Inventory>
       },
       {
-           path: 'checkout',
-           element: <CheckOut></CheckOut>
+        path: 'checkout',
+        element: <CheckOut></CheckOut>
       },
       {
         path: '/login',
         element: <LogIn></LogIn>
+      },
+      {
+        path: 'register',
+        element: <Register></Register>
       }
     ]
   }
