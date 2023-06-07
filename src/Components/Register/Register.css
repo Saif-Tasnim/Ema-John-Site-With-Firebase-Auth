@@ -1,0 +1,25 @@
+.box-sign-up{
+    width: 500px;
+    height: 880px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin: 128px auto;
+}
+
+.err{
+  margin: 90px auto;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* toast modification CSS */
+
+.custom-toast {
+  width: 500px; 
+
+}
+
+.custom-toast-body {
+  font-size: 17px;
+  padding: 10px; 
+}

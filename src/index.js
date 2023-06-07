@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   createBrowserRouter,
@@ -17,6 +18,8 @@ import LogIn from './Components/LogIn/LogIn';
 import cartProducts from './loaders/cartProductsLoader';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Register from './Components/Register/Register';
+import ContextApi from './Provider/ContextApi';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,16 +32,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/order',
-        element: <Orders></Orders>,
+        element: <PrivateRoute> <Orders></Orders>          </PrivateRoute>,
         loader: cartProducts
       },
       {
         path: '/management',
-        element: <Inventory></Inventory>
+        element: <PrivateRoute><Inventory></Inventory></PrivateRoute> 
       },
       {
         path: 'checkout',
-        element: <CheckOut></CheckOut>
+        element: <CheckOut></CheckOut> 
       },
       {
         path: '/login',
@@ -56,7 +59,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ContextApi>
+      <RouterProvider router={router}></RouterProvider>
+
+    </ContextApi>
   </React.StrictMode>
 );
 
